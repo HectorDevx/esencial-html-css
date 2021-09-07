@@ -1,10 +1,11 @@
 :root {
   --white: #ffffff;
   --white20: #a5a3a5;
+  --gray40: #3a3539;
   --gray30: #212121;
   --gray20: #212429;
   --gray10: #616161;
-  --black: #251f24;
+  --black: #0f0d0f;
 }
 
 ::selection {
@@ -16,7 +17,8 @@ html {
 }
 
 body {
-  margin: 0;
+  margin-inline: 0;
+  margin-block: 0;
   background-color: var(--black);
   color: var(--white);
   font-family: "Nunito", system-ui, sans-serif;
@@ -64,7 +66,7 @@ header a:hover {
 }
 
 .main-content {
-  padding: 0 20px;
+  padding-inline: 20px;
 }
 
 .wrapper {
@@ -78,26 +80,28 @@ nav details summary {
 }
 
 hr {
-  margin: 64px 0;
+  margin-block: 64px;
   border-color: var(--gray10);
   opacity: 20%;
 }
 
 h1 {
-  margin-top: 64px;
-  margin-bottom: 16px;
+  margin-block-start: 64px;
+  margin-block-end: 16px;
   font-size: 3.75em;
   font-weight: 400;
 }
 
 h2 {
-  margin: 64px 0 40px;
+  margin-block-start: 64px;
+  margin-block-end: 40px;
   font-size: 2em;
   font-weight: normal;
 }
 
 h3 {
-  margin: 8px 0 16px;
+  margin-block-start: 8px;
+  margin-block-end: 16px;
   padding: 8px 0;
   font-size: 1.5em;
   font-weight: normal;
@@ -133,13 +137,14 @@ p {
   counter-reset: titleList;
 }
 
-.content:first-of-type {
-  margin: 64;
-}
+/* .content:first-of-type {
+  margin: 64px;
+} */
 
 .content img {
-  margin-top: 40px;
+  margin-block-start: 40px;
   max-inline-size: 100%;
+  display: block;
 }
 
 .content + hr {
@@ -147,7 +152,7 @@ p {
 }
 
 .content ul li {
-  margin-bottom: 16px;
+  margin-block-end: 16px;
 }
 
 .content ol li {
@@ -155,23 +160,26 @@ p {
 }
 
 pre {
+  overflow: auto;
   padding: 40px;
-  background-color: #fec62e;
-  color: var(--black);
-  line-height: 24px;
+  color: var(--white);
+  background-color: var(--gray30);
   font-size: 16px;
+  line-height: 24px;
 }
 
 blockquote {
+  margin-block: 32px;
+  padding: 24px;
   font-size: 24px;
-  margin: 32px 0;
-  padding-left: 16px;
-  border-left: 4px solid var(--gray20);
-  line-height: 24px;
+  line-height: 32px;
+  color: var(--white);
+  background-color: var(--gray40);
+  border-radius: 8px;
 }
 
 blockquote span {
-  color: var(--gray10);
+  color: var(--white);
 }
 
 blockquote span::before {
