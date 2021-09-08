@@ -26,16 +26,16 @@ body {
 
 .hero {
   background: linear-gradient(96.07deg, #314755 30.63%, #26a0da 102.18%);
-  height: 350px;
+  block-size: 350px;
 }
 
 header {
   font-size: 14px;
-  width: 188px;
+  inline-size: 188px;
   color: var(--white);
   position: absolute;
-  top: 64px;
-  left: -232px;
+  inset-block-start: 64px;
+  inset-inline-start: -232px;
 }
 
 header a {
@@ -45,7 +45,7 @@ header a {
 
 header li {
   color: var(--white20);
-  margin-bottom: 16px;
+  margin-block-end: 16px;
 }
 
 header a:hover {
@@ -54,7 +54,7 @@ header a:hover {
 
 .header {
   position: sticky;
-  top: 0;
+  inset-block-start: 0;
 }
 
 .header-content {
@@ -106,13 +106,13 @@ h3 {
   font-size: 1.5em;
   font-weight: normal;
   position: sticky;
-  top: 0;
+  inset-block-start: 0;
   background: var(--black);
 }
 
 .content h3 {
   counter-increment: titleList;
-  padding-bottom: 8px;
+  padding-block-end: 8px;
 }
 
 .content h3::before {
@@ -121,12 +121,12 @@ h3 {
 
 .content h3::after {
   content: "";
-  width: 192px;
-  height: 4px;
+  inline-size: 192px;
+  block-size: 4px;
   background: var(--white20);
   position: absolute;
-  left: 0;
-  bottom: 0;
+  inset-inline-start: 0;
+  inset-block-end: 0;
 }
 
 p {
