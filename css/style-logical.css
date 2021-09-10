@@ -6,6 +6,7 @@
   --gray20: #212429;
   --gray10: #616161;
   --black: #0f0d0f;
+  --blue: #157efb;
 }
 
 ::selection {
@@ -26,16 +27,13 @@ body {
 
 .hero {
   background: linear-gradient(96.07deg, #314755 30.63%, #26a0da 102.18%);
-  block-size: 350px;
+  block-size: 80px;
 }
 
 header {
+  margin-block-start: 24px;
   font-size: 14px;
-  inline-size: 188px;
   color: var(--white);
-  position: absolute;
-  inset-block-start: 64px;
-  inset-inline-start: -232px;
 }
 
 header a {
@@ -53,12 +51,7 @@ header a:hover {
 }
 
 .header {
-  position: sticky;
-  inset-block-start: 0;
-}
-
-.header-content {
-  position: relative;
+  padding-inline: 16px;
 }
 
 .main {
@@ -86,9 +79,9 @@ hr {
 }
 
 h1 {
-  margin-block-start: 64px;
+  margin-block-start: 24px;
   margin-block-end: 16px;
-  font-size: 3.75em;
+  font-size: 2em;
   font-weight: 400;
 }
 
@@ -169,10 +162,10 @@ pre {
 }
 
 blockquote {
-  margin-block: 32px;
-  padding: 24px;
-  font-size: 24px;
-  line-height: 32px;
+  margin: 16px;
+  padding: 16px;
+  font-size: 18px;
+  line-height: 24px;
   color: var(--white);
   background-color: var(--gray40);
   border-radius: 8px;
@@ -215,4 +208,62 @@ blockquote span::before {
   height: auto;
   aspect-ratio: 16/9;
   border-radius: 16px;
+}
+
+.form input {
+  display: block;
+  margin-block-end: 24px;
+  inline-size: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--white20);
+  background-color: var(--black);
+  color: var(--white);
+  border-radius: 8px;
+  padding-block: 12px;
+  padding-inline: 16px;
+  font-size: 16px;
+}
+
+.form input::-webkit-input-placeholder {
+  color: var(--white20);
+}
+
+.form input[type="submit"] {
+  background-color: var(--blue);
+  border: none;
+}
+
+@media screen and (min-width: 1366px) {
+  header {
+    inline-size: 188px;
+    position: absolute;
+    inset-block-start: 64px;
+    inset-inline-start: -232px;
+  }
+
+  .header {
+    position: sticky;
+    inset-block-start: 0;
+    padding-inline: 0;
+  }
+
+  .header-content {
+    position: relative;
+  }
+
+  .hero {
+    block-size: 350px;
+  }
+
+  h1 {
+    font-size: 3.75em;
+    margin-block-start: 64px;
+  }
+
+  blockquote {
+    margin: 32px;
+    font-size: 24px;
+    line-height: 32px;
+    padding: 24px;
+  }
 }
